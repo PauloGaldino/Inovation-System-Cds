@@ -1,0 +1,6 @@
+﻿===========================================================
+Esta camada fica responsável pelas entiades do projeto.
+
+===========================================================
+Uma observção:
+Todos od metodos e propriedades serãp escritos em inglês.

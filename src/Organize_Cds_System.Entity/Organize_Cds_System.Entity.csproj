@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Notifications\" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.10" />
   </ItemGroup>
 
 </Project>
