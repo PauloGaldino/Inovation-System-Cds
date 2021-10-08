@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organize_Cds_System.Applica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organize_Cds_System.Infrastructure", "src\Organize_Cds_System.Infrastructure\Organize_Cds_System.Infrastructure.csproj", "{BFB4BCFC-3168-471F-88AE-DC2072E35740}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organize_Cds_System.UI", "src\Organize_Cds_System.UI\Organize_Cds_System.UI.csproj", "{7C29854C-6E49-4AA6-A47E-E4EF94709467}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{BFB4BCFC-3168-471F-88AE-DC2072E35740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFB4BCFC-3168-471F-88AE-DC2072E35740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFB4BCFC-3168-471F-88AE-DC2072E35740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C29854C-6E49-4AA6-A47E-E4EF94709467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C29854C-6E49-4AA6-A47E-E4EF94709467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C29854C-6E49-4AA6-A47E-E4EF94709467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C29854C-6E49-4AA6-A47E-E4EF94709467}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{D2C825F6-C9F7-43E5-848D-52D0CB005E9B} = {D87E7BEA-BE4D-4525-B7C6-8B8B810F2359}
 		{C44B4361-748D-4FC0-82B8-A507E58CAC9F} = {20D8FF6F-DEDF-4A40-BDFB-A719FFCEA1FF}
 		{BFB4BCFC-3168-471F-88AE-DC2072E35740} = {43D9C780-7920-43B1-BD6D-CD6060FB572D}
+		{7C29854C-6E49-4AA6-A47E-E4EF94709467} = {C6F34F37-7F27-407A-9762-77ADDCC2780B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {265678BE-7CD4-4218-AD36-F6519FD44B7D}

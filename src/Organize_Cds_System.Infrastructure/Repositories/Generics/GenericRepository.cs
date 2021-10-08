@@ -11,17 +11,17 @@ namespace Organize_Cds_System.Infrastructure.Repositories.Generics
 {
     public class GenericRepository<T> : IGeneric<T>, IDisposable where T : class
     {
-        private readonly DbContextOptions<BaseContextdb> _optionsBulder;
+        private readonly DbContextOptions<BaseDbContext> _optionsBulder;
 
         public GenericRepository()
         {
-            _optionsBulder = new DbContextOptions<BaseContextdb>();
+            _optionsBulder = new DbContextOptions<BaseDbContext>();
         }
 
         //===============Métodos CRUD===============================
         public async Task Add(T Object)
         {
-            using (var data = new BaseContextdb(_optionsBulder))
+            using (var data = new BaseDbContext(_optionsBulder))
             {
                 await data.Set<T>().AddAsync(Object);
                 await data.SaveChangesAsync();
@@ -30,7 +30,7 @@ namespace Organize_Cds_System.Infrastructure.Repositories.Generics
 
         public async Task Delete(T Object)
         {
-            using (var data = new BaseContextdb(_optionsBulder))
+            using (var data = new BaseDbContext(_optionsBulder))
             {
                 data.Set<T>().Remove(Object);
                 await data.SaveChangesAsync();
@@ -39,7 +39,7 @@ namespace Organize_Cds_System.Infrastructure.Repositories.Generics
 
         public async Task UpDate(T Object)
         {
-            using (var data = new BaseContextdb(_optionsBulder))
+            using (var data = new BaseDbContext(_optionsBulder))
             {
                 data.Set<T>().Update(Object);
                 await data.SaveChangesAsync();
@@ -49,7 +49,7 @@ namespace Organize_Cds_System.Infrastructure.Repositories.Generics
         //===============Métodos para pesquisa======================
         public async Task<T> getEntityById(int Id)
         {
-            using (var data = new BaseContextdb(_optionsBulder))
+            using (var data = new BaseDbContext(_optionsBulder))
             {
                 return await data.Set<T>().FindAsync(Id);
             }
@@ -57,7 +57,7 @@ namespace Organize_Cds_System.Infrastructure.Repositories.Generics
 
         public async Task<List<T>> List()
         {
-            using (var data = new BaseContextdb(_optionsBulder))
+            using (var data = new BaseDbContext(_optionsBulder))
             {
                 return await data.Set<T>().AsNoTracking().ToListAsync();
             }

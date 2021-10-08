@@ -6,9 +6,9 @@ using Organize_Cds_System.Entity.Entities.Products.Cds;
 
 namespace Organize_Cds_System.Infrastructure.Configurations.Context
 {
-    public class BaseContextdb : IdentityDbContext<IdentityUser>
+    public class BaseDbContext : IdentityDbContext<IdentityUser>
     {
-        public BaseContextdb(DbContextOptions<BaseContextdb> options) : base(options) { }
+        public BaseDbContext(DbContextOptions<BaseDbContext> options) : base(options) { }
 
         public DbSet<Cd> Cds { get; set; }
         public DbSet<UserCd> UserCds { get; set; }

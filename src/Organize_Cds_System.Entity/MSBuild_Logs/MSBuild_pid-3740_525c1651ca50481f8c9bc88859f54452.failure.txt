@@ -1,0 +1,15 @@
+UNHANDLED EXCEPTIONS FROM PROCESS 3740:
+=====================
+08/10/2021 06:09:38
+System.UnauthorizedAccessException: O acesso ao caminho 'C:\WINDOWS\system32\MSBuild_Logs' foi negado.
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   em System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   em Microsoft.Build.Shared.ExceptionHandling.DumpExceptionToFile(Exception ex)
+   em Microsoft.Build.BackEnd.NodeEndpointOutOfProcBase.RunReadLoop(Stream localReadPipe, Stream localWritePipe, ConcurrentQueue`1 localPacketQueue, AutoResetEvent localPacketAvailable, AutoResetEvent localTerminatePacketPump)
+   em Microsoft.Build.BackEnd.NodeEndpointOutOfProcBase.PacketPumpProc()
+   em System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   em System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   em System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   em System.Threading.ThreadHelper.ThreadStart()
+===================
