@@ -1,5 +1,3 @@
-using System;
-
 namespace Organize_Cds_System.UI.Models
 {
     public class ErrorViewModel

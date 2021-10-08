@@ -1,13 +1,8 @@
 ﻿using Organize_Cds_System.Entity.Entities.Persons.Users.Indentity;
 using Organize_Cds_System.Entity.Entities.Products.Cds;
 using Organize_Cds_System.Entity.Notifications;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Organize_Cds_System.Entity.Entities.Persons.UserCds
 {

@@ -1,8 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,11 +14,6 @@ using Organize_Cds_System.Entity.Entities.Persons.Users.Indentity;
 using Organize_Cds_System.Infrastructure.Configurations.Context;
 using Organize_Cds_System.Infrastructure.Repositories.Generics;
 using Organize_Cds_System.Infrastructure.Repositories.Products.Cds;
-using Organize_Cds_System.UI.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Organize_Cds_System.UI
 {
