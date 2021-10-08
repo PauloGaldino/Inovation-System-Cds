@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Organize_Cds_System.Entity\Organize_Cds_System.Entity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\InterfaceServices\Persons\Users\" />
+    <Folder Include="Interfaces\Persons\" />
+    <Folder Include="Interfaces\Persons\Users\" />
+    <Folder Include="Services\Persons\Users\" />
+  </ItemGroup>
+
+</Project>
