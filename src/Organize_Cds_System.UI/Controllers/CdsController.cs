@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Organize_Cds_System.Application.Interfaces.Products.Cds;
 using Organize_Cds_System.Entity.Entities.Products.Cds;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Organize_Cds_System.UI.Controllers
 {
+   
     public class CdsController : Controller
     {
         private readonly ICdApp _cdApp;

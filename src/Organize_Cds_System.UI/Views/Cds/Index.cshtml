@@ -49,6 +49,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.StockQuantity)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicationUser)
+            </td>
          
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

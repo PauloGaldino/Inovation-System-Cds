@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Organize_Cds_System.Entity.Entities.Persons.Users.Indentity
 {
-    public class ApplicationUser : IdentityUser<string>
+    public class ApplicationUser : IdentityUser
     {
         [Column("NOME")]
         [MaxLength(255)]
