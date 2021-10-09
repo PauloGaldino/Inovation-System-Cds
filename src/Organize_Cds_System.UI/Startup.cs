@@ -57,7 +57,7 @@ namespace Organize_Cds_System.UI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseMigrationsEndPoint();
+              
             }
             else
             {
@@ -80,6 +80,7 @@ namespace Organize_Cds_System.UI
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
         }
     }
 }

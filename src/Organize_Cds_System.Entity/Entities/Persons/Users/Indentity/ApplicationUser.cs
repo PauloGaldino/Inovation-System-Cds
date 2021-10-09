@@ -10,13 +10,8 @@ namespace Organize_Cds_System.Entity.Entities.Persons.Users.Indentity
 {
     public class ApplicationUser : IdentityUser
     {
-        [Column("NOME")]
-        [MaxLength(255)]
-        [Display(Name = "NOME")]
+    
         public string Name { get; set; }
 
-        [Column("TIPO")]
-        [DisplayName("TIPO_USUÁRIO")]
-        public UserType? Type { get; set; }
     }
 }

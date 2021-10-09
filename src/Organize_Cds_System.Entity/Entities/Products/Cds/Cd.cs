@@ -11,12 +11,12 @@ namespace Organize_Cds_System.Entity.Entities.Products.Cds
     public class Cd : Notifiers
     {
         [Column("Id")]
-        [Display(Name = "Codigo")]
+        [Display(Name = "CODIGO")]
         public int Id { get; set; }
 
-        [Column("Nome")]
+        [Column("NOME")]
         [MaxLength(255)]
-        [Display(Name = "Nome")]
+        [Display(Name = "NOME_CD")]
         public string Name { get; set; }
 
         [Column("ARTISTA")]
@@ -24,6 +24,11 @@ namespace Organize_Cds_System.Entity.Entities.Products.Cds
         [DisplayName("ARTISTA")]
         public string Artist { get; set; }
 
+        [Column("ANOLANCAMENTO")]
+        [DisplayName("ANO_LANCAMENTO")]
+        public int releaseYear { get; set; }
+
+        
         [Column(TypeName = "decimal(18, 3)")]
         [Display(Name = "DURAÇÃO")]
         public decimal Duration { get; set; }
@@ -34,8 +39,8 @@ namespace Organize_Cds_System.Entity.Entities.Products.Cds
 
 
 
-        [Column("Estado")]
-        [Display(Name = "Estado")]
+        [Column("ESTADO")]
+        [Display(Name = "ESTADO")]
         public bool State { get; set; }
 
         [Column("DATAREGISTRO")]
@@ -44,7 +49,7 @@ namespace Organize_Cds_System.Entity.Entities.Products.Cds
 
         [Column("DATAALTERACAO")]
         [Display(Name = "DATA_ALTERAÇÃO")]
-        public DateTime ChangeDate { get; set; }
+        public DateTime ModificateDate { get; set; }
 
 
         [Display(Name = "USUÁRIO")]

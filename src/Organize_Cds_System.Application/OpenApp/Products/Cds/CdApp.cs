@@ -61,5 +61,10 @@ namespace Organize_Cds_System.Application.OpenApp.Products.Cds
         {
             await _IServiceCd.UpdateCd(cd);
         }
+
+        public async Task<List<Cd>> ListCdByUser(string userId)
+        {
+            return await _ICd.ListCdByUser(userId);
+        }
     }
 }

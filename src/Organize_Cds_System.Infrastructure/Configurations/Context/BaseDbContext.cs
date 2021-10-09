@@ -1,18 +1,18 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Organize_Cds_System.Entity.Entities.Persons.UserCds;
+using Organize_Cds_System.Entity.Entities.Persons.Users.Indentity;
 using Organize_Cds_System.Entity.Entities.Products.Cds;
 
 namespace Organize_Cds_System.Infrastructure.Configurations.Context
 {
-    public class BaseDbContext : IdentityDbContext<IdentityUser>
+    public class BaseDbContext : IdentityDbContext<ApplicationUser>
     {
         public BaseDbContext(DbContextOptions<BaseDbContext> options) : base(options) { }
 
         public DbSet<Cd> Cds { get; set; }
         public DbSet<UserCd> UserCds { get; set; }
-        public DbSet<IdentityUser> IdentityUser { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -26,7 +26,7 @@ namespace Organize_Cds_System.Infrastructure.Configurations.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<IdentityUser>().ToTable("AspNetUsers").HasKey(t => t.Id);
+            builder.Entity<ApplicationUser>().ToTable("AspNetUsers").HasKey(t => t.Id);
 
             base.OnModelCreating(builder);
         }

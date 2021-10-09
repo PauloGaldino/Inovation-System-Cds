@@ -1,0 +1,71 @@
+	istema de organização de CDs:
+
+	Pode ser feito na linguagem de sua preferência e banco de dados relacional (escolha livre)
+
+ 
+
+	Requisitos obrigatórios:
+	
+		- Login (Usuário e senha, senha guardada no banco com criptografia)OK
+		
+		- Tela de início com botões para acesso às funcionalidades do sistema OK
+
+		- Inserir novo CD Ok
+
+		- Consultar CDs cadastrado OK
+		- Ver CD Ok
+
+		- Atualizar dados do CD
+
+		- Excluir CD OK
+
+	Um usuário possui um nome, um nome de usuário e uma senha criptografada Ok
+
+	Um CD é composto por Nome, Artista, Ano de lançamento, Gênero e Duração
+
+	Extra:
+
+		- Cadastro de usuário dentro do sistema
+
+		- Separar CDs por usuário (O usuário logado só pode ver os próprios discos cadastrados)
+
+		- Exclusão de conta do usuário
+
+		- Logoff por inatividade
+
+A entrega pode ser em um repositório on-line (Github) ou arquivo zip.	istema de organização de CDs:
+
+	Pode ser feito na linguagem de sua preferência e banco de dados relacional (escolha livre)
+
+ 
+
+	Requisitos obrigatórios:
+	
+		- Login (Usuário e senha, senha guardada no banco com criptografia)OK
+		
+		- Tela de início com botões para acesso às funcionalidades do sistema OK
+
+		- Inserir novo CD Ok
+
+		- Consultar CDs cadastrado OK
+		- Ver CD Ok
+
+		- Atualizar dados do CD
+
+		- Excluir CD OK
+
+	Um usuário possui um nome, um nome de usuário e uma senha criptografada Ok
+
+	Um CD é composto por Nome, Artista, Ano de lançamento, Gênero e Duração
+
+	Extra:
+
+		- Cadastro de usuário dentro do sistema
+
+		- Separar CDs por usuário (O usuário logado só pode ver os próprios discos cadastrados)
+
+		- Exclusão de conta do usuário
+
+		- Logoff por inatividade
+
+A entrega pode ser em um repositório on-line (Github) ou arquivo zip.

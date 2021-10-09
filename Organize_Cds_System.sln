@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Project_docs", "0-Project_docs", "{ADEDC2CA-22D3-4B24-9747-04CA830641D6}"
+	ProjectSection(SolutionItems) = preProject
+		Desfio para estágio.txt = Desfio para estágio.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Frontend", "1-Frontend", "{B842F76A-23A3-4268-ADD0-EA5C71A1B60B}"
 EndProject
@@ -21,13 +24,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1-Presentations", "1.1-Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Organize_Cds_System.Entity", "src\Organize_Cds_System.Entity\Organize_Cds_System.Entity.csproj", "{D3CFCCD3-4B61-4878-B6F8-2D13AD33D08C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organize_Cds_System.Domain", "src\Organize_Cds_System.Domain\Organize_Cds_System.Domain.csproj", "{D2C825F6-C9F7-43E5-848D-52D0CB005E9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Organize_Cds_System.Domain", "src\Organize_Cds_System.Domain\Organize_Cds_System.Domain.csproj", "{D2C825F6-C9F7-43E5-848D-52D0CB005E9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organize_Cds_System.Application", "src\Organize_Cds_System.Application\Organize_Cds_System.Application.csproj", "{C44B4361-748D-4FC0-82B8-A507E58CAC9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Organize_Cds_System.Application", "src\Organize_Cds_System.Application\Organize_Cds_System.Application.csproj", "{C44B4361-748D-4FC0-82B8-A507E58CAC9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organize_Cds_System.Infrastructure", "src\Organize_Cds_System.Infrastructure\Organize_Cds_System.Infrastructure.csproj", "{BFB4BCFC-3168-471F-88AE-DC2072E35740}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Organize_Cds_System.Infrastructure", "src\Organize_Cds_System.Infrastructure\Organize_Cds_System.Infrastructure.csproj", "{BFB4BCFC-3168-471F-88AE-DC2072E35740}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Organize_Cds_System.UI", "src\Organize_Cds_System.UI\Organize_Cds_System.UI.csproj", "{7C29854C-6E49-4AA6-A47E-E4EF94709467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Organize_Cds_System.UI", "src\Organize_Cds_System.UI\Organize_Cds_System.UI.csproj", "{7C29854C-6E49-4AA6-A47E-E4EF94709467}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

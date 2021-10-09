@@ -1,26 +1,32 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Organize_Cds_System.Application.Interfaces.Products.Cds;
+using Organize_Cds_System.Entity.Entities.Persons.Users.Indentity;
 using Organize_Cds_System.Entity.Entities.Products.Cds;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Organize_Cds_System.UI.Controllers
 {
-   
+   [Authorize]
     public class CdsController : Controller
     {
+         public readonly UserManager<ApplicationUser> _userManager;
         private readonly ICdApp _cdApp;
 
-        public CdsController(ICdApp cdApp)
+        public CdsController(ICdApp cdApp, UserManager<ApplicationUser> userManager)
         {
             _cdApp = cdApp;
+            _userManager = userManager;
 
         }
         // GET: CdsController
         public async Task<IActionResult> Index()
         {
-            return View(await _cdApp.List());
+            var userIdlogged = await returnUserIdLogged();
+
+            return View( await _cdApp.ListCdByUser(userIdlogged));
         }
 
         // GET: CdsController/Details/5
@@ -42,6 +48,11 @@ namespace Organize_Cds_System.UI.Controllers
         {
             try
             {
+
+              var userIdlogged = await returnUserIdLogged();
+
+                cd.UserId = userIdlogged;
+
                 await _cdApp.AddCd(cd);
                 if (cd.Notifications.Any())
                 {
@@ -49,12 +60,12 @@ namespace Organize_Cds_System.UI.Controllers
                     {
                         ModelState.AddModelError(item.PropertyName, item.Message);
                     }
-                    return View("Edit", cd);
+                    return View("Create", cd);
                 }
             }
             catch
             {
-                return View("Edit", cd);
+                return View("Create", cd);
             }
             return RedirectToAction(nameof(Index));
         }
@@ -72,7 +83,10 @@ namespace Organize_Cds_System.UI.Controllers
         {
             try
             {
+                
+
                 await _cdApp.UpdateCd(cd);
+               
                 if (cd.Notifications.Any())
                 {
                     foreach (var item in cd.Notifications)
@@ -111,6 +125,12 @@ namespace Organize_Cds_System.UI.Controllers
             {
                 return View();
             }
+        }
+
+        public async Task<string> returnUserIdLogged()
+        {
+            var userIdLogged = await _userManager.GetUserAsync(User);
+            return userIdLogged.Id;
         }
     }
 }

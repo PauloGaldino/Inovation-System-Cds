@@ -1,5 +1,6 @@
 ﻿using Organize_Cds_System.Application.Interfaces.Generics;
 using Organize_Cds_System.Entity.Entities.Products.Cds;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Organize_Cds_System.Application.Interfaces.Products.Cds
@@ -11,5 +12,7 @@ namespace Organize_Cds_System.Application.Interfaces.Products.Cds
         Task AddCd(Cd cd);
 
         Task UpdateCd(Cd cd);
+
+        Task<List<Cd>> ListCdByUser(string userId);
     }
 }
