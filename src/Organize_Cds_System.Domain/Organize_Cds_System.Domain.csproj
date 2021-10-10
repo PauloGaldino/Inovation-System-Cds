@@ -10,6 +10,9 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\InterfaceServices\Persons\Users\" />
+    <Folder Include="Interfaces\Persons\" />
+    <Folder Include="Interfaces\Persons\Users\" />
+    <Folder Include="Services\Persons\Users\" />
   </ItemGroup>
 
 </Project>

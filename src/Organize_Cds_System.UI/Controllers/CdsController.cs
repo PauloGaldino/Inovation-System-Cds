@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Organize_Cds_System.UI.Controllers
 {
-    [Authorize]
+   [Authorize]
     public class CdsController : Controller
     {
-        public readonly UserManager<ApplicationUser> _userManager;
+         public readonly UserManager<ApplicationUser> _userManager;
         private readonly ICdApp _cdApp;
 
         public CdsController(ICdApp cdApp, UserManager<ApplicationUser> userManager)
@@ -26,7 +26,7 @@ namespace Organize_Cds_System.UI.Controllers
         {
             var userIdlogged = await returnUserIdLogged();
 
-            return View(await _cdApp.ListCdByUser(userIdlogged));
+            return View( await _cdApp.ListCdByUser(userIdlogged));
         }
 
         // GET: CdsController/Details/5
@@ -49,7 +49,7 @@ namespace Organize_Cds_System.UI.Controllers
             try
             {
 
-                var userIdlogged = await returnUserIdLogged();
+              var userIdlogged = await returnUserIdLogged();
 
                 cd.UserId = userIdlogged;
 
@@ -83,10 +83,10 @@ namespace Organize_Cds_System.UI.Controllers
         {
             try
             {
-
+                
 
                 await _cdApp.UpdateCd(cd);
-
+               
                 if (cd.Notifications.Any())
                 {
                     foreach (var item in cd.Notifications)

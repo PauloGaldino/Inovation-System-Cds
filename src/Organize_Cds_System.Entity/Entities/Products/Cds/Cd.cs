@@ -26,14 +26,9 @@ namespace Organize_Cds_System.Entity.Entities.Products.Cds
 
         [Column("ANOLANCAMENTO")]
         [DisplayName("ANO_LANCAMENTO")]
-        public int ReleaseYear { get; set; }
+        public int releaseYear { get; set; }
 
-        [Column("GENERO")]
-        [MaxLength(255)]
-        [Display(Name = "GENERO")]
-        public string Genre { get; set; }
-    
-
+        
         [Column(TypeName = "decimal(18, 3)")]
         [Display(Name = "DURAÇÃO")]
         public decimal Duration { get; set; }

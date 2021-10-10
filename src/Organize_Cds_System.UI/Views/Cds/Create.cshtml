@@ -1,19 +1,20 @@
 ﻿@model Organize_Cds_System.Entity.Entities.Products.Cds.Cd
 
 @{
-    ViewData["Title"] = "Criar Cd";
+    ViewData["Title"] = "Create";
 }
 
-<h1>Criar um novo Cd</h1>
+<h1>Create</h1>
 
+<h4>Cd</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-           
+          
              <input asp-for="Id" type="hidden" />
-             <input asp-for="UserId" type="hidden" />
+              <input asp-for="UserId" type="hidden" />
 
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -26,14 +27,9 @@
                 <span asp-validation-for="Artist" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ReleaseYear" class="control-label"></label>
-                <input asp-for="ReleaseYear" class="form-control" />
-                <span asp-validation-for="ReleaseYear" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Genre" class="control-label"></label>
-                <input asp-for="Genre" class="form-control" />
-                <span asp-validation-for="Genre" class="text-danger"></span>
+                <label asp-for="releaseYear" class="control-label"></label>
+                <input asp-for="releaseYear" class="form-control" />
+                <span asp-validation-for="releaseYear" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Duration" class="control-label"></label>
@@ -45,17 +41,16 @@
                 <input asp-for="StockQuantity" class="form-control" />
                 <span asp-validation-for="StockQuantity" class="text-danger"></span>
             </div>
-        
-            
+           >
             <div class="form-group">
-                <input type="submit" value="Inserir Cd" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Voltar para a lista</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Organize_Cds_System.Entity.Entities.Persons.UserCds;
 using Organize_Cds_System.Entity.Entities.Persons.Users.Indentity;
 using Organize_Cds_System.Entity.Entities.Products.Cds;
 
@@ -10,7 +11,7 @@ namespace Organize_Cds_System.Infrastructure.Configurations.Context
         public BaseDbContext(DbContextOptions<BaseDbContext> options) : base(options) { }
 
         public DbSet<Cd> Cds { get; set; }
-
+        public DbSet<UserCd> UserCds { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
 
