@@ -1,12 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Organize_Cds_System.Entity.Entities.Persons.Users.Indentity;
-using Organize_Cds_System.Infrastructure.Configurations.Context;
+﻿using Microsoft.AspNetCore.Hosting;
 
 [assembly: HostingStartup(typeof(Organize_Cds_System.UI.Areas.Identity.IdentityHostingStartup))]
 namespace Organize_Cds_System.UI.Areas.Identity
@@ -15,7 +7,8 @@ namespace Organize_Cds_System.UI.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
+            builder.ConfigureServices((context, services) =>
+            {
             });
         }
     }

@@ -57,7 +57,7 @@ namespace Organize_Cds_System.UI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-              
+
             }
             else
             {

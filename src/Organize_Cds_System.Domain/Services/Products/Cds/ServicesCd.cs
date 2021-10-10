@@ -5,12 +5,13 @@ using System;
 using System.Threading.Tasks;
 
 namespace Organize_Cds_System.Domain.Services.Products.Cds
-{/// <summary>
- /// Esta classe fica responsável
- /// por manter as regras de negócio
- /// e as validaçõesda entidade 
- /// de produto
- /// </summary>
+{
+    /// <summary>
+    /// Esta classe fica responsável
+    /// por manter as regras de negócio
+    /// e as validaçõesda entidade 
+    /// de produto
+    /// </summary>
     public class ServiceCd : IServiceCd
     {
         //Injeção de dependencia

@@ -10,8 +10,8 @@ using Organize_Cds_System.Infrastructure.Configurations.Context;
 namespace Organize_Cds_System.Infrastructure.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
-    [Migration("20211009142857_IntialCreate")]
-    partial class IntialCreate
+    [Migration("20211010021620_InitiaçCreate")]
+    partial class InitiaçCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -156,33 +156,6 @@ namespace Organize_Cds_System.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Organize_Cds_System.Entity.Entities.Persons.UserCds.UserCd", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("USUARIOID")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CdId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int")
-                        .HasColumnName("QUANTIDADECD");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CdId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("CompraUsuario");
-                });
-
             modelBuilder.Entity("Organize_Cds_System.Entity.Entities.Persons.Users.Indentity.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -267,6 +240,11 @@ namespace Organize_Cds_System.Infrastructure.Migrations
                     b.Property<decimal>("Duration")
                         .HasColumnType("decimal(18,3)");
 
+                    b.Property<string>("Genre")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("GENERO");
+
                     b.Property<DateTime>("ModificateDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("DATAALTERACAO");
@@ -280,6 +258,10 @@ namespace Organize_Cds_System.Infrastructure.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DATAREGISTRO");
 
+                    b.Property<int>("ReleaseYear")
+                        .HasColumnType("int")
+                        .HasColumnName("ANOLANCAMENTO");
+
                     b.Property<bool>("State")
                         .HasColumnType("bit")
                         .HasColumnName("ESTADO");
@@ -290,10 +272,6 @@ namespace Organize_Cds_System.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("releaseYear")
-                        .HasColumnType("int")
-                        .HasColumnName("ANOLANCAMENTO");
 
                     b.HasKey("Id");
 
@@ -351,23 +329,6 @@ namespace Organize_Cds_System.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Organize_Cds_System.Entity.Entities.Persons.UserCds.UserCd", b =>
-                {
-                    b.HasOne("Organize_Cds_System.Entity.Entities.Products.Cds.Cd", "Cds")
-                        .WithMany()
-                        .HasForeignKey("CdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Organize_Cds_System.Entity.Entities.Persons.Users.Indentity.ApplicationUser", "ApplicationUser")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("ApplicationUser");
-
-                    b.Navigation("Cds");
                 });
 
             modelBuilder.Entity("Organize_Cds_System.Entity.Entities.Products.Cds.Cd", b =>

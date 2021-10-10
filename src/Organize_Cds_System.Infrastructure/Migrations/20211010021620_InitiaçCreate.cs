@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Organize_Cds_System.Infrastructure.Migrations
 {
-    public partial class IntialCreate : Migration
+    public partial class InitiaçCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -162,6 +162,7 @@ namespace Organize_Cds_System.Infrastructure.Migrations
                     NOME = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     ARTISTA = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     ANOLANCAMENTO = table.Column<int>(type: "int", nullable: false),
+                    GENERO = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     Duration = table.Column<decimal>(type: "decimal(18,3)", nullable: false),
                     QUANTIDADEESTOQUE = table.Column<int>(type: "int", nullable: false),
                     ESTADO = table.Column<bool>(type: "bit", nullable: false),
@@ -178,33 +179,6 @@ namespace Organize_Cds_System.Infrastructure.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "CompraUsuario",
-                columns: table => new
-                {
-                    USUARIOID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    QUANTIDADECD = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    CdId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CompraUsuario", x => x.USUARIOID);
-                    table.ForeignKey(
-                        name: "FK_CompraUsuario_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_CompraUsuario_Cd_CdId",
-                        column: x => x.CdId,
-                        principalTable: "Cd",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -250,16 +224,6 @@ namespace Organize_Cds_System.Infrastructure.Migrations
                 name: "IX_Cd_UserId",
                 table: "Cd",
                 column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CompraUsuario_CdId",
-                table: "CompraUsuario",
-                column: "CdId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CompraUsuario_UserId",
-                table: "CompraUsuario",
-                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -280,13 +244,10 @@ namespace Organize_Cds_System.Infrastructure.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "CompraUsuario");
+                name: "Cd");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
-
-            migrationBuilder.DropTable(
-                name: "Cd");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
